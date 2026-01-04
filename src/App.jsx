@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Navigation } from './components/Navigation';
 import { ThemeToggle } from './components/ThemeToggle';
 import { SimpleList } from './components/SimpleList';
 import { CatalogGrid } from './components/CatalogGrid';
@@ -66,6 +67,12 @@ function App() {
     setSavedItems(prev => prev.filter(item => item.id !== id));
   };
 
+  const clearAll = () => {
+    if (window.confirm(t('clear_confirm') || 'Are you sure you want to clear your entire list?')) {
+      setSavedItems([]);
+    }
+  };
+
   // Export
   const handlePrint = () => window.print();
 
@@ -92,6 +99,8 @@ function App() {
       </header>
 
       <main className="container" style={{ marginTop: '1.5rem' }}>
+        {/* Navigation */}
+        <Navigation />
 
         {/* Navigation Tabs (View Mode) */}
         <div className="view-toggle no-print" style={{
@@ -117,116 +126,127 @@ function App() {
           </button>
         </div>
 
-        {viewMode === 'catalog' && (
-          <div className="catalog-view fade-in">
-            <div className="search-bar" style={{ position: 'relative', marginBottom: '1rem' }}>
-              <Search className="search-icon" size={20} />
-              <input
-                type="text"
-                placeholder="Search items (e.g. Milk, Apple)..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="form-input search-input"
-              />
-              {searchTerm && (
-                <button
-                  onClick={() => setSearchTerm('')}
-                  style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)' }}
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-
-            <CatalogGrid
-              items={CATALOG}
-              selectedIds={selectedIds}
-              searchTerm={searchTerm}
-              onToggle={toggleCatalogItem}
-              onAddCustom={addCustomItem}
-            />
-          </div>
-        )}
-
-        {(viewMode === 'list' || window.matchMedia('print').matches) && (
-          <div className="list-view fade-in">
-            <div className="actions-toolbar no-print" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
-              <h2 style={{ fontSize: '1.5rem' }}>My Shopping List</h2>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button
-                  onClick={async () => {
-                    if (!window.html2canvas) {
-                      alert('Image generation library not loaded yet. Please try again.');
-                      return;
-                    }
-
-                    const element = document.querySelector('.list-view');
-                    const btnToolbar = document.querySelector('.actions-toolbar');
-
-                    // Temporarily hide toolbar for screenshot
-                    if (btnToolbar) btnToolbar.style.display = 'none';
-
-                    try {
-                      const canvas = await window.html2canvas(element, {
-                        useCORS: true,
-                        backgroundColor: document.documentElement.getAttribute('data-theme') === 'dark' ? '#1e293b' : '#ffffff',
-                        scale: 2 // Better resolution
-                      });
-
-                      if (btnToolbar) btnToolbar.style.display = 'flex'; // Restore toolbar
-
-                      canvas.toBlob(async (blob) => {
-                        if (!blob) return;
-
-                        // Create file
-                        const file = new File([blob], 'shopping-list.png', { type: 'image/png' });
-
-                        // Try Native Share
-                        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                          try {
-                            await navigator.share({
-                              files: [file],
-                              title: 'My Shopping List',
-                              text: 'Here is my shopping list from My Home Kitchen!'
-                            });
-                          } catch (err) {
-                            console.error('Share failed', err);
-                          }
-                        } else {
-                          // Fallback to Download
-                          const link = document.createElement('a');
-                          link.download = 'shopping-list.png';
-                          link.href = canvas.toDataURL();
-                          link.click();
-                          alert('Image saved to downloads (Sharing not supported on this device/browser)');
-                        }
-                      });
-
-                    } catch (err) {
-                      console.error('Screenshot failed', err);
-                      if (btnToolbar) btnToolbar.style.display = 'flex';
-                      alert('Could not generate image.');
-                    }
-                  }}
-                  className="btn btn-icon"
-                  title="Share Image"
-                >
-                  <Share2 size={18} />
-                </button>
-                <button onClick={handleCopy} className="btn btn-icon" title="Copy Text"><Clipboard size={18} /></button>
-                <button onClick={handlePrint} className="btn btn-icon" title="Print/PDF"><Download size={18} /></button>
+        {
+          viewMode === 'catalog' && (
+            <div className="catalog-view fade-in">
+              <div className="search-bar" style={{ position: 'relative', marginBottom: '1rem' }}>
+                <Search className="search-icon" size={20} />
+                <input
+                  type="text"
+                  placeholder="Search items (e.g. Milk, Apple)..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="form-input search-input"
+                />
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)' }}
+                  >
+                    Clear
+                  </button>
+                )}
               </div>
+
+              <CatalogGrid
+                items={CATALOG}
+                selectedIds={selectedIds}
+                searchTerm={searchTerm}
+                onToggle={toggleCatalogItem}
+                onAddCustom={addCustomItem}
+              />
             </div>
+          )
+        }
 
-            <SimpleList
-              items={myFullList}
-              onAdd={addCustomItem} // Still allow adding from here potentially
-              onToggle={toggleCheck}
-              onDelete={deleteItem}
-            />
-          </div>
-        )}
+        {
+          (viewMode === 'list' || window.matchMedia('print').matches) && (
+            <div className="list-view fade-in">
+              <div className="actions-toolbar no-print" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: '1.5rem' }}>My Shopping List</h2>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <button
+                    onClick={async () => {
+                      if (!window.html2canvas) {
+                        alert('Image generation library not loaded yet. Please try again.');
+                        return;
+                      }
 
+                      const element = document.querySelector('.list-view');
+                      const btnToolbar = document.querySelector('.actions-toolbar');
+
+                      // Temporarily hide toolbar for screenshot
+                      if (btnToolbar) btnToolbar.style.display = 'none';
+
+                      try {
+                        const canvas = await window.html2canvas(element, {
+                          useCORS: true,
+                          backgroundColor: document.documentElement.getAttribute('data-theme') === 'dark' ? '#1e293b' : '#ffffff',
+                          scale: 2 // Better resolution
+                        });
+
+                        if (btnToolbar) btnToolbar.style.display = 'flex'; // Restore toolbar
+
+                        canvas.toBlob(async (blob) => {
+                          if (!blob) return;
+
+                          // Create file
+                          const file = new File([blob], 'shopping-list.png', { type: 'image/png' });
+
+                          // Try Native Share
+                          if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                            try {
+                              await navigator.share({
+                                files: [file],
+                                title: 'My Shopping List',
+                                text: 'Here is my shopping list from My Home Kitchen!'
+                              });
+                            } catch (err) {
+                              console.error('Share failed', err);
+                            }
+                          } else {
+                            // Fallback to Download
+                            const link = document.createElement('a');
+                            link.download = 'shopping-list.png';
+                            link.href = canvas.toDataURL();
+                            link.click();
+                            alert('Image saved to downloads (Sharing not supported on this device/browser)');
+                          }
+                        });
+
+                      } catch (err) {
+                        console.error('Screenshot failed', err);
+                        if (btnToolbar) btnToolbar.style.display = 'flex';
+                        alert('Could not generate image.');
+                      }
+                    }}
+                    className="btn btn-icon"
+                    title="Share Image"
+                  >
+                    <Share2 size={18} />
+                  </button>
+                  <button
+                    onClick={clearAll}
+                    className="btn btn-icon"
+                    title={t('clear_all') || "Clear All"}
+                    style={{ color: '#ef4444' }}
+                  >
+                    <X size={18} />
+                  </button>
+                  <button onClick={handleCopy} className="btn btn-icon" title="Copy Text"><Clipboard size={18} /></button>
+                  <button onClick={handlePrint} className="btn btn-icon" title="Print/PDF"><Download size={18} /></button>
+                </div>
+              </div>
+
+              <SimpleList
+                items={myFullList}
+                onAdd={addCustomItem} // Still allow adding from here potentially
+                onToggle={toggleCheck}
+                onDelete={deleteItem}
+              />
+            </div>
+          )
+        }
       </main>
 
       <style>{`
@@ -279,7 +299,7 @@ function App() {
           .list-view { display: block !important; }
         }
       `}</style>
-    </div>
+    </div >
   );
 }
 

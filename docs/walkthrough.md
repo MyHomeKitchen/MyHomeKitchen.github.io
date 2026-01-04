@@ -20,7 +20,7 @@ Since you requested dockerization, this is the easiest way to run without instal
     ```bash
     docker-compose up
     ```
-3.  Open [http://localhost:5173](http://localhost:5173).
+3.  Open [http://localhost:8083](http://localhost:8083).
 
 ### Option B: Using Node.js (If installed)
 1.  Install dependencies:
