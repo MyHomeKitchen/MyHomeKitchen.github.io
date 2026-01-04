@@ -28,10 +28,11 @@ export function ThemeToggle() {
                 style={{
                     padding: '0.25rem 0.5rem',
                     borderRadius: '4px',
-                    border: '1px solid var(--border-color)',
-                    background: 'var(--card-bg)',
-                    color: 'var(--text-color)',
-                    fontSize: '0.9rem'
+                    border: '1px solid var(--border)',
+                    background: 'var(--bg-card)',
+                    color: 'var(--text-main)',
+                    fontSize: '0.9rem',
+                    cursor: 'pointer'
                 }}
             >
                 <option value="en">English</option>
