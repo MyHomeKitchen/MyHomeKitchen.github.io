@@ -1,8 +1,9 @@
 import { useMemo, useState, useRef } from 'react';
 import { getIconForProduct } from '../utils/icons';
 import { Accordion } from './Accordion';
-import { Plus, Check, Star, X, RefreshCw } from 'lucide-react';
+import { Plus, Check, Star, X, Image as ImageIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 // Import all product images eagerly
 const productImages = import.meta.glob('../assets/products/*.{png,jpg,jpeg,webp}', { eager: true });
@@ -10,14 +11,16 @@ const productImages = import.meta.glob('../assets/products/*.{png,jpg,jpeg,webp}
 export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCustom }) {
     const { t } = useTranslation();
     const [previewItem, setPreviewItem] = useState(null);
+    const [imageOverrides, setImageOverrides] = useLocalStorage('product_images_v1', {});
 
     // 1. Filter items based on search
     const filteredItems = useMemo(() => {
         return items.filter(item =>
+            t(item.name).toLowerCase().includes(searchTerm.toLowerCase()) ||
             item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (item.keywords && item.keywords.some(k => k.includes(searchTerm.toLowerCase())))
         );
-    }, [items, searchTerm]);
+    }, [items, searchTerm, t]);
 
     const isExactMatchFound = filteredItems.some(i => i.name.toLowerCase() === searchTerm.toLowerCase());
 
@@ -33,10 +36,20 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
     }, [filteredItems]);
 
     // Helper to resolve image path
-    const getProductImage = (imageName) => {
-        if (!imageName) return null;
-        const path = `../assets/products/${imageName}`;
+    const getProductImage = (item) => {
+        // Check local storage override first
+        if (imageOverrides[item.id]) {
+            if (imageOverrides[item.id] === 'USE_ICON') return null;
+            return imageOverrides[item.id];
+        }
+        // Fallback to bundled asset
+        if (!item.image) return null;
+        const path = `../assets/products/${item.image}`;
         return productImages[path]?.default;
+    };
+
+    const handleUpdateImage = (itemId, newUrl) => {
+        setImageOverrides(prev => ({ ...prev, [itemId]: newUrl }));
     };
 
     return (
@@ -45,12 +58,13 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
             {previewItem && (
                 <ImagePreviewModal
                     item={previewItem}
-                    imageUrl={getProductImage(previewItem.image)}
+                    imageUrl={getProductImage(previewItem)}
                     onClose={() => setPreviewItem(null)}
+                    onUpdateImage={handleUpdateImage}
                 />
             )}
 
-            {/* Top Products Section (Simulated for now, could be dynamic) */}
+            {/* Top Products Section */}
             {!searchTerm && (
                 <div style={{ marginBottom: '1.5rem' }}>
                     <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -64,7 +78,7 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
                                 isSelected={selectedIds.has(item.id)}
                                 onToggle={onToggle}
                                 onPreview={() => setPreviewItem(item)}
-                                imageUrl={getProductImage(item.image)}
+                                imageUrl={getProductImage(item)}
                             />
                         ))}
                     </div>
@@ -75,7 +89,7 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
             {Object.entries(groupedItems).map(([category, catItems]) => (
                 <Accordion
                     key={category}
-                    title={t(category) || t(`categories.${category}`) || category}
+                    title={t(`categories.${category}`) || category}
                     count={catItems.filter(i => selectedIds.has(i.id)).length}
                     defaultOpen={true}
                 >
@@ -91,7 +105,7 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
                                 isSelected={selectedIds.has(item.id)}
                                 onToggle={onToggle}
                                 onPreview={() => setPreviewItem(item)}
-                                imageUrl={getProductImage(item.image)}
+                                imageUrl={getProductImage(item)}
                             />
                         ))}
                     </div>
@@ -134,11 +148,12 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
 
 function CatalogCard({ item, isSelected, onToggle, onPreview, imageUrl }) {
     const Icon = getIconForProduct(item.name);
+    const { t } = useTranslation();
     const longPressTimer = useRef(null);
 
     const handleStart = () => {
         longPressTimer.current = setTimeout(() => {
-            onPreview(); // Trigger preview after 500ms
+            onPreview();
         }, 600);
     };
 
@@ -159,7 +174,7 @@ function CatalogCard({ item, isSelected, onToggle, onPreview, imageUrl }) {
             onTouchEnd={handleEnd}
             onContextMenu={(e) => {
                 e.preventDefault();
-                onPreview(); // Right click also previews
+                onPreview();
             }}
             className={`catalog-card ${isSelected ? 'selected' : ''}`}
             style={{
@@ -214,7 +229,7 @@ function CatalogCard({ item, isSelected, onToggle, onPreview, imageUrl }) {
                 lineHeight: 1.2,
                 color: 'var(--text-main)'
             }}>
-                {item.name}
+                {t(item.name)}
             </span>
 
             {isSelected && (
@@ -239,23 +254,24 @@ function CatalogCard({ item, isSelected, onToggle, onPreview, imageUrl }) {
     );
 }
 
-function ImagePreviewModal({ item, imageUrl, onClose }) {
+function ImagePreviewModal({ item, imageUrl, onClose, onUpdateImage }) {
     const { t } = useTranslation();
-    // Logic to reload image: append a random query param to the src if it were a URL.
-    // BUT, since we are using local assets (downloaded files), we can't easily "switch" the image file client-side.
-    // HOWEVER, the user request says "images are not matching... try another".
-    // Since we CANNOT download a new image from the browser (CORS, file system access),
-    // we will simulate this by showing a "Image Refresh Not Available Offline" or
-    // if it's a downloaded asset, maybe we can search on Google?
-    // wait, the prompt says "when user hold on product make images large for preview".
-    // AND "some images are not matching".
-    // I can't magically fix the local file from the browser.
-    // I will add a link to Search Google Images for this item as a fallback?
-    // Or I can add a fake "Report" button.
-    // Let's implement the Large Preview first.
+    const [editMode, setEditMode] = useState(false);
+    const [customUrl, setCustomUrl] = useState('');
 
-    // Actually, if I can't change the file, I can allow them to toggle between the Image and the Icon!
-    // That solves "image not matching" -> "Use Icon instead".
+    const handleSaveUrl = () => {
+        if (customUrl) {
+            onUpdateImage(item.id, customUrl);
+            setEditMode(false);
+            onClose();
+        }
+    };
+
+    const handleUseIcon = () => {
+        onUpdateImage(item.id, 'USE_ICON');
+        setEditMode(false);
+        onClose();
+    };
 
     return (
         <div style={{
@@ -285,8 +301,9 @@ function ImagePreviewModal({ item, imageUrl, onClose }) {
                     <X size={24} />
                 </button>
 
-                <h3 style={{ fontSize: '1.25rem', textAlign: 'center', marginTop: '0.5rem' }}>{item.name}</h3>
+                <h3 style={{ fontSize: '1.25rem', textAlign: 'center', marginTop: '0.5rem' }}>{t(item.name)}</h3>
 
+                {/* Image Area */}
                 <div style={{
                     width: '100%',
                     aspectRatio: '1',
@@ -295,23 +312,56 @@ function ImagePreviewModal({ item, imageUrl, onClose }) {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    position: 'relative'
                 }}>
                     {imageUrl ? (
                         <img src={imageUrl} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     ) : (
-                        <div style={{ color: 'gray' }}>No Image Available</div>
+                        <div style={{ color: 'gray', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <ImageIcon size={48} />
+                            <span>No Image</span>
+                        </div>
                     )}
                 </div>
 
-                <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                    {t('wrong_image') || "Wrong image?"} <br />
-                    <small>(This is a local demo, report not available)</small>
-                </p>
-
-                <button onClick={onClose} className="btn btn-primary" style={{ width: '100%' }}>
-                    {t('close') || "Close"}
-                </button>
+                {/* Fix Actions */}
+                {!editMode ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        <p style={{ textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                            {t('wrong_image') || "Wrong image?"}
+                        </p>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
+                            <button onClick={() => setEditMode(true)} className="btn" style={{ flex: 1, border: '1px solid var(--border)' }}>
+                                Fix Image
+                            </button>
+                            <button onClick={onClose} className="btn btn-primary" style={{ flex: 1 }}>
+                                {t('close') || "OK"}
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
+                        <p style={{ fontSize: '0.9rem', fontWeight: 600 }}>Fix Mismatched Image:</p>
+                        <input
+                            type="text"
+                            placeholder="Paste Image URL..."
+                            value={customUrl}
+                            onChange={(e) => setCustomUrl(e.target.value)}
+                            className="form-input"
+                            style={{ padding: '0.5rem', borderRadius: '0.25rem', border: '1px solid var(--border)' }}
+                        />
+                        <button onClick={handleSaveUrl} className="btn btn-primary" disabled={!customUrl}>
+                            Save New Image
+                        </button>
+                        <button onClick={handleUseIcon} className="btn" style={{ border: '1px solid var(--border)' }}>
+                            Remove Image (Use Icon)
+                        </button>
+                        <button onClick={() => setEditMode(false)} style={{ background: 'none', border: 'none', textDecoration: 'underline', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                            Cancel
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

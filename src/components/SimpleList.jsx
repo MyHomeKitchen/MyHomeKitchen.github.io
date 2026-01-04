@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Plus, Trash2, Check, ImageOff } from 'lucide-react';
+import { Plus, Trash2, Check, ImageOff, Image as ImageIcon } from 'lucide-react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 // Import all product images eagerly (copied from CatalogGrid)
 const productImages = import.meta.glob('../assets/products/*.{png,jpg,jpeg,webp}', { eager: true });
@@ -8,6 +9,7 @@ const productImages = import.meta.glob('../assets/products/*.{png,jpg,jpeg,webp}
 export function SimpleList({ items, onAdd, onToggle, onDelete }) {
     const { t } = useTranslation();
     const [inputValue, setInputValue] = useState('');
+    const [imageOverrides] = useLocalStorage('product_images_v1', {});
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,9 +19,18 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
     };
 
     // Helper to resolve image path
-    const getProductImage = (imageName) => {
-        if (!imageName) return null;
-        const path = `../assets/products/${imageName}`;
+    const getProductImage = (item) => {
+        if (!item) return null;
+
+        // Check override
+        if (imageOverrides[item.id]) {
+            if (imageOverrides[item.id] === 'USE_ICON') return null; // Logic to show icon? 
+            return imageOverrides[item.id];
+        }
+
+        // Default
+        if (!item.image) return null;
+        const path = `../assets/products/${item.image}`;
         return productImages[path]?.default;
     };
 
@@ -52,7 +63,8 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
             {/* List Items */}
             <ul className="list-items" style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {items.map(item => {
-                    const imageUrl = getProductImage(item.image);
+                    const imageUrl = getProductImage(item);
+                    const isIconOverride = imageOverrides[item.id] === 'USE_ICON';
 
                     return (
                         <li
@@ -92,7 +104,7 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
                                     {item.checked && <Check size={14} />}
                                 </div>
 
-                                {/* Image or Broken Image Placeholder */}
+                                {/* Image or Icon Placeholder */}
                                 <div style={{
                                     width: '40px',
                                     height: '40px',
@@ -111,7 +123,7 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                         />
                                     ) : (
-                                        <ImageOff size={20} color="#9ca3af" />
+                                        isIconOverride ? <ImageIcon size={20} color="var(--primary)" /> : <ImageOff size={20} color="#9ca3af" />
                                     )}
                                 </div>
 
@@ -122,7 +134,7 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
                                         fontWeight: 500
                                     }}
                                 >
-                                    {item.name}
+                                    {t(item.name)}
                                 </span>
                             </div>
 

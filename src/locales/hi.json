@@ -9,6 +9,7 @@
     "preview": "पूर्वावलोकन",
     "wrong_image": "गलत छवि? दूसरी कोशिश करें",
     "close": "बंद करें",
+    "app_title": "मेरा होम किचन",
     "categories": {
         "Produce 🥬": "फल और सब्जियां 🥬",
         "Dairy & Fridge 🥛": "डेयरी और फ्रिज 🥛",
@@ -41,5 +42,21 @@
         "Jewelry 💎": "आभूषण 💎",
         "Furniture 🪑": "फर्नीचर 🪑",
         "Music 🎵": "संगीत 🎵"
-    }
+    },
+    "Apple": "सेब",
+    "Banana": "केला",
+    "Carrot": "गाजर",
+    "Tomato": "टमाटर",
+    "Potato": "आलू",
+    "Onion": "प्याज",
+    "Garlic": "लहसुन",
+    "Lemon": "नींबू",
+    "Milk": "दूध",
+    "Eggs": "अंडे",
+    "Bread": "ब्रेड",
+    "Rice": "चावल",
+    "Chicken": "मुर्गा",
+    "Water": "पानी",
+    "Tea": "चाई",
+    "Coffee": "कॉफ़ी"
 }
