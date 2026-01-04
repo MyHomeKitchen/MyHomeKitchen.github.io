@@ -1,0 +1,13 @@
+{
+    "app_title": "My Home Kitchen",
+    "add_item_placeholder": "Add item (e.g. Milk 🥛)",
+    "tab_grocery": "Grocery",
+    "tab_appliances": "Appliances",
+    "settings": "Settings",
+    "theme_dark": "Dark Mode",
+    "theme_light": "Light Mode",
+    "language": "Language",
+    "export_pdf": "Save as PDF",
+    "share": "Share List",
+    "clear_completed": "Clear Completed"
+}
