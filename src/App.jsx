@@ -153,8 +153,68 @@ function App() {
             <div className="actions-toolbar no-print" style={{ justifyContent: 'space-between', marginBottom: '1rem' }}>
               <h2 style={{ fontSize: '1.5rem' }}>My Shopping List</h2>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button onClick={handleCopy} className="btn btn-icon"><Clipboard size={18} /></button>
-                <button onClick={handlePrint} className="btn btn-icon"><Download size={18} /></button>
+                <button
+                  onClick={async () => {
+                    if (!window.html2canvas) {
+                      alert('Image generation library not loaded yet. Please try again.');
+                      return;
+                    }
+
+                    const element = document.querySelector('.list-view');
+                    const btnToolbar = document.querySelector('.actions-toolbar');
+
+                    // Temporarily hide toolbar for screenshot
+                    if (btnToolbar) btnToolbar.style.display = 'none';
+
+                    try {
+                      const canvas = await window.html2canvas(element, {
+                        useCORS: true,
+                        backgroundColor: document.documentElement.getAttribute('data-theme') === 'dark' ? '#1e293b' : '#ffffff',
+                        scale: 2 // Better resolution
+                      });
+
+                      if (btnToolbar) btnToolbar.style.display = 'flex'; // Restore toolbar
+
+                      canvas.toBlob(async (blob) => {
+                        if (!blob) return;
+
+                        // Create file
+                        const file = new File([blob], 'shopping-list.png', { type: 'image/png' });
+
+                        // Try Native Share
+                        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                          try {
+                            await navigator.share({
+                              files: [file],
+                              title: 'My Shopping List',
+                              text: 'Here is my shopping list from My Home Kitchen!'
+                            });
+                          } catch (err) {
+                            console.error('Share failed', err);
+                          }
+                        } else {
+                          // Fallback to Download
+                          const link = document.createElement('a');
+                          link.download = 'shopping-list.png';
+                          link.href = canvas.toDataURL();
+                          link.click();
+                          alert('Image saved to downloads (Sharing not supported on this device/browser)');
+                        }
+                      });
+
+                    } catch (err) {
+                      console.error('Screenshot failed', err);
+                      if (btnToolbar) btnToolbar.style.display = 'flex';
+                      alert('Could not generate image.');
+                    }
+                  }}
+                  className="btn btn-icon"
+                  title="Share Image"
+                >
+                  <Share2 size={18} />
+                </button>
+                <button onClick={handleCopy} className="btn btn-icon" title="Copy Text"><Clipboard size={18} /></button>
+                <button onClick={handlePrint} className="btn btn-icon" title="Print/PDF"><Download size={18} /></button>
               </div>
             </div>
 

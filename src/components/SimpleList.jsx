@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Plus, Trash2, Check, X } from 'lucide-react';
-import { getIconForProduct } from '../utils/icons';
+import { Plus, Trash2, Check, ImageOff } from 'lucide-react';
+
+// Import all product images eagerly (copied from CatalogGrid)
+const productImages = import.meta.glob('../assets/products/*.{png,jpg,jpeg,webp}', { eager: true });
 
 export function SimpleList({ items, onAdd, onToggle, onDelete }) {
     const { t } = useTranslation();
@@ -14,6 +16,13 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
         setInputValue('');
     };
 
+    // Helper to resolve image path
+    const getProductImage = (imageName) => {
+        if (!imageName) return null;
+        const path = `../assets/products/${imageName}`;
+        return productImages[path]?.default;
+    };
+
     return (
         <div className="simple-list">
             {/* Input Section - Hidden on Print */}
@@ -24,7 +33,7 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
                         className="form-input"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
-                        placeholder={t('add_item_placeholder')}
+                        placeholder={t('add_item_placeholder') || "Add item..."}
                         style={{
                             flex: 1,
                             padding: '0.75rem',
@@ -43,7 +52,8 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
             {/* List Items */}
             <ul className="list-items" style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {items.map(item => {
-                    const Icon = getIconForProduct(item.name);
+                    const imageUrl = getProductImage(item.image);
+
                     return (
                         <li
                             key={item.id}
@@ -75,15 +85,35 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         backgroundColor: item.checked ? 'var(--success)' : 'transparent',
-                                        color: 'white'
+                                        color: 'white',
+                                        flexShrink: 0
                                     }}
                                 >
                                     {item.checked && <Check size={14} />}
                                 </div>
 
-                                <span className="icon" style={{ color: 'var(--primary)' }}>
-                                    <Icon size={20} />
-                                </span>
+                                {/* Image or Broken Image Placeholder */}
+                                <div style={{
+                                    width: '40px',
+                                    height: '40px',
+                                    borderRadius: '4px',
+                                    overflow: 'hidden',
+                                    backgroundColor: '#eee',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    flexShrink: 0
+                                }}>
+                                    {imageUrl ? (
+                                        <img
+                                            src={imageUrl}
+                                            alt=""
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    ) : (
+                                        <ImageOff size={20} color="#9ca3af" />
+                                    )}
+                                </div>
 
                                 <span
                                     className="text"
@@ -111,7 +141,7 @@ export function SimpleList({ items, onAdd, onToggle, onDelete }) {
 
             {items.length === 0 && (
                 <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
-                    <p>List is empty</p>
+                    <p>{t('no_items_list') || "List is empty"}</p>
                 </div>
             )}
         </div>

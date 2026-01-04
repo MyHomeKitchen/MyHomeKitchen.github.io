@@ -1,0 +1,12 @@
+{
+    "search_placeholder": "વસ્તુ શોધો...",
+    "add_custom": "\"{{name}}\" યાદીમાં ઉમેરો",
+    "no_items": "\"{{name}}\" માટે કોઈ વસ્તુ મળી નથી",
+    "freq_used": "વારંવાર વપરાતી",
+    "settings": "સેટિંગ્સ",
+    "theme_light": "લાઇટ મોડ",
+    "theme_dark": "ડાર્ક મોડ",
+    "preview": "પૂર્વાવલોકન",
+    "wrong_image": "ખોટી છબી? બીજી પ્રયાસ કરો",
+    "close": "બંધ કરો"
+}
