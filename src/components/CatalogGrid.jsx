@@ -45,7 +45,7 @@ export function CatalogGrid({ items, selectedIds, searchTerm, onToggle, onAddCus
     }, [filteredItems]);
 
     // Favorites Logic (Top 25 items)
-    const favoriteItems = useMemo(() => items.slice(0, 25), [items]);
+    const favoriteItems = useMemo(() => items.slice(0, 12), [items]);
     const favoriteIds = useMemo(() => new Set(favoriteItems.map(i => i.id)), [favoriteItems]);
 
     // Categories sorted by "Favorite Density" (how many items in this category are in favorites)
