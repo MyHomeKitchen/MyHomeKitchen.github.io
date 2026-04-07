@@ -1,0 +1,37 @@
+{
+  "name": "Pantry 🧂",
+  "items": [
+    {
+      "id": "c_baking_powder",
+      "name": "Baking Powder",
+      "category": "Pantry 🧂",
+      "keywords": [
+        "bilingual",
+        "baking"
+      ],
+      "image": "baking_powder.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_vanilla",
+      "name": "Vanilla Extract",
+      "category": "Pantry 🧂",
+      "keywords": [
+        "baking"
+      ],
+      "image": "vanilla.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_choc_chips",
+      "name": "Chocolate Chips",
+      "category": "Pantry 🧂",
+      "keywords": [
+        "baking",
+        "sweet"
+      ],
+      "image": "choc_chips.jpg",
+      "metric": "kg"
+    }
+  ]
+}

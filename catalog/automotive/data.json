@@ -1,0 +1,49 @@
+{
+  "name": "Automotive 🚗",
+  "items": [
+    {
+      "id": "c_car_oil",
+      "name": "Motor Oil",
+      "category": "Automotive 🚗",
+      "keywords": [
+        "car",
+        "maintenance"
+      ],
+      "image": "motor_oil.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_wiper_fluid",
+      "name": "Wiper Fluid",
+      "category": "Automotive 🚗",
+      "keywords": [
+        "car",
+        "clean"
+      ],
+      "image": "wiper_fluid.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_car_wash",
+      "name": "Car Wash Soap",
+      "category": "Automotive 🚗",
+      "keywords": [
+        "car",
+        "clean"
+      ],
+      "image": "car_wash.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_air_freshener",
+      "name": "Air Freshener",
+      "category": "Automotive 🚗",
+      "keywords": [
+        "car",
+        "smell"
+      ],
+      "image": "car_fresh.jpg",
+      "metric": "unit"
+    }
+  ]
+}

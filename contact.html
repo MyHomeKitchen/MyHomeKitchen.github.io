@@ -2,411 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - My Home Kitchen</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap">
-  <style>
-    /* CSS Variables - Synced with main app */
-    :root {
-      /* Brand Colors */
-      --primary: #6366f1;
-      --primary-hover: #4f46e5;
-      --secondary: #ec4899;
-
-      /* Neutral Colors (Light) */
-      --bg-app: #ffffff;
-      --bg-surface: #f8fafc;
-      --bg-card: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-
-      /* Status */
-      --success: #22c55e;
-      --danger: #ef4444;
-
-      /* UI Tokens */
-      --radius-sm: 0.375rem;
-      --radius-md: 0.5rem;
-      --radius-lg: 0.75rem;
-      --radius-full: 9999px;
-
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-      --font-sans: 'Inter', system-ui, sans-serif;
-      --font-display: 'Outfit', system-ui, sans-serif;
-    }
-
-    [data-theme='dark'] {
-      /* Neutral Colors (Dark) */
-      --bg-app: #0f172a;
-      --bg-surface: #1e293b;
-      --bg-card: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #334155;
-
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--bg-app);
-      color: var(--text-main);
-      line-height: 1.5;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: var(--font-display);
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .app-header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      padding: 1.5rem 0;
-      box-shadow: var(--shadow-md);
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo-badge {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      padding: 0.5rem;
-      border-radius: var(--radius-md);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .page-title {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      margin-top: 2rem;
-      color: var(--primary);
-      font-family: var(--font-display);
-    }
-
-    .card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      margin-bottom: 2rem;
-    }
-
-    .card h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      font-family: var(--font-display);
-      color: var(--primary);
-    }
-
-    .card p {
-      line-height: 1.8;
-      color: var(--text-main);
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.25rem;
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      margin-bottom: 1rem;
-      transition: all 0.2s ease;
-    }
-
-    .contact-item:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-      color: white;
-    }
-
-    .icon.email {
-      background: var(--primary);
-    }
-
-    .icon.github {
-      background: #333;
-    }
-
-    [data-theme='dark'] .icon.github {
-      background: #fff;
-      color: #333;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
-      font-family: var(--font-display);
-      color: var(--text-main);
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .theme-toggle {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      padding: 0.5rem;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      font-size: 1.25rem;
-      transition: background 0.2s;
-    }
-
-    .theme-toggle:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    nav {
-      display: flex;
-      gap: 0.5rem;
-      padding: 0.5rem;
-      border-bottom: 1px solid var(--border);
-      background-color: var(--bg-card);
-      margin-bottom: 1rem;
-      border-radius: var(--radius-md);
-      margin-top: 1.5rem;
-    }
-
-    nav a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-md);
-      background-color: transparent;
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 400;
-      transition: all 0.2s ease;
-    }
-
-    nav a:hover {
-      background-color: var(--bg-surface);
-    }
-
-    nav .active {
-      background-color: var(--primary);
-      color: white;
-      font-weight: 600;
-    }
-
-    .sites-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sites-list li {
-      margin-bottom: 0.75rem;
-    }
-
-    .sites-list a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1rem;
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      transition: all 0.2s ease;
-      font-weight: 500;
-    }
-
-    .sites-list a:hover {
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      transform: translateX(5px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kirana List</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-  <header class="app-header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo-section">
-          <div class="logo-badge">🛒</div>
-          <h1>My Home Kitchen</h1>
-        </div>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </div>
-    </div>
-  </header>
+<body class="light-theme">
 
-  <main class="container">
-    <!-- Navigation Menu -->
-    <nav>
-      <a href="index.html">
-        🏠 <span>Home</span>
-      </a>
-      <a href="about.html">
-        ℹ️ <span>About</span>
-      </a>
-      <div class="active">
-        ✉️ <span>Contact</span>
-      </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 12H5V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V12H22L12 2Z" fill="currentColor" />
+                </svg>
+                <span>Kirana List</span>
+            </a>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <h2 class="page-title">Contact Developer</h2>
-
-    <div class="card">
-      <h2>📬 Get in Touch</h2>
-      <p>
-        Have questions, feedback, or suggestions? Feel free to reach out to the developer!
-      </p>
-
-      <div class="contact-item">
-        <div class="icon email">📧</div>
-        <div>
-          <h3>Email</h3>
-          <a href="mailto:contactmail.br@gmail.com">contactmail.br@gmail.com</a>
+    <main class="app-shell">
+        <div class="mini-hero">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you.</p>
         </div>
-      </div>
 
-      <div class="contact-item">
-        <div class="icon github">🐙</div>
-        <div>
-          <h3>GitHub</h3>
-          <a href="https://github.com/RVAKR" target="_blank" rel="noopener noreferrer">
-            github.com/RVAKR
-          </a>
+        <div class="products-section">
+            <div style="background: var(--surface-color); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <div>
+                  <h3 style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">📧 Email Us</h3>
+                  <a href="mailto:contactmail.br@gmail.com" style="color: var(--primary-color); font-weight: 600;">contactmail.br@gmail.com</a>
+                </div>
+
+                <div>
+                  <h3 style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">🐙 GitHub</h3>
+                  <a href="https://github.com/RVAKR" target="_blank" style="color: var(--primary-color); font-weight: 600;">github.com/RVAKR</a>
+                </div>
+
+                <div style="margin-top: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                  <p style="color: var(--text-secondary); line-height: 1.6;">If you have any feedback or want to request a new feature, please don't hesitate to reach out. We are constantly improving our catalog and app functionality.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html#home" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+        </a>
+        <a href="index.html#shop" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Items</span>
+        </a>
+        <button id="view-list-btn" class="nav-item">
+            <div class="list-icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                <span id="list-count-badge" class="badge">0</span>
+            </div>
+            <span>My List</span>
+        </button>
+        <a href="about.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>About</span>
+        </a>
+    </nav>
+
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <div id="list-drawer" class="list-drawer">
+        <div class="drawer-header">
+            <h3>Shopping List</h3>
+            <button id="close-drawer" class="close-btn">&times;</button>
+        </div>
+        <div id="list-items" class="drawer-content"></div>
+        <div class="drawer-footer">
+            <button id="copy-list" class="btn btn-secondary">Copy Text</button>
+            <button id="clear-list" class="btn btn-outline">Clear All</button>
+        </div>
     </div>
 
-    <div class="card">
-      <h2>🌐 More Projects</h2>
-      <p>
-        Check out these other useful web applications by the same developer:
-      </p>
-      <ul class="sites-list">
-        <li>
-          <a href="https://myhomekitchen.github.io/" target="_blank" rel="noopener noreferrer">
-            🛒 My Home Kitchen - Smart Shopping List App
-          </a>
-        </li>
-        <li>
-          <a href="https://my-cheat-sheets.github.io/" target="_blank" rel="noopener noreferrer">
-            📚 My Cheat Sheets - Quick Reference Guides
-          </a>
-        </li>
-        <li>
-          <a href="https://choicebase.github.io/" target="_blank" rel="noopener noreferrer">
-            🎯 ChoiceBase - Decision Making Tool
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>💡 Feedback & Contributions</h2>
-      <p>
-        This is an open-source project, and contributions are welcome! If you'd like to:
-      </p>
-      <ul style="padding-left: 1.5rem; line-height: 2;">
-        <li>Report a bug or issue</li>
-        <li>Suggest a new feature</li>
-        <li>Contribute code improvements</li>
-        <li>Help with translations</li>
-      </ul>
-      <p style="margin-top: 1rem;">
-        Please visit the GitHub repository or send an email. Your feedback helps make this app better for everyone!
-      </p>
-    </div>
-  </main>
-
-  <script>
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme') || 'light';
-
-    if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeToggle.textContent = '☀️';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-    });
-  </script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

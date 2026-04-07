@@ -1,0 +1,215 @@
+{
+  "name": "Pantry & Condiments 🧂",
+  "items": [
+    {
+      "id": "c_olive_oil",
+      "name": "Olive Oil",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "oil",
+        "cooking"
+      ],
+      "image": "olive_oil.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_veg_oil",
+      "name": "Vegetable Oil",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "oil",
+        "cooking"
+      ],
+      "image": "veg_oil.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_salt",
+      "name": "Salt",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "seasoning"
+      ],
+      "image": "salt.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_pepper",
+      "name": "Pepper",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "seasoning"
+      ],
+      "image": "pepper.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_spices",
+      "name": "Spices",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "seasoning"
+      ],
+      "image": "spices.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_tomato_sauce",
+      "name": "Tomato Sauce",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "sauce",
+        "pasta"
+      ],
+      "image": "tomato_sauce.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_canned_tomatoes",
+      "name": "Canned Tomatoes",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "canned"
+      ],
+      "image": "canned_tomatoes.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_peanut_butter",
+      "name": "Peanut Butter",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "spread",
+        "snack"
+      ],
+      "image": "peanut_butter.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_jam",
+      "name": "Jam",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "spread",
+        "fruit"
+      ],
+      "image": "jam.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_honey",
+      "name": "Honey",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "sweetener"
+      ],
+      "image": "honey.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_mayo",
+      "name": "Mayonnaise",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "condiment"
+      ],
+      "image": "mayo.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_ketchup",
+      "name": "Ketchup",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "condiment"
+      ],
+      "image": "ketchup.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_mustard",
+      "name": "Mustard",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "condiment"
+      ],
+      "image": "mustard.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_soy_sauce",
+      "name": "Soy Sauce",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "condiment",
+        "asian"
+      ],
+      "image": "soy_sauce.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_vinegar",
+      "name": "Vinegar",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "cooking",
+        "acid"
+      ],
+      "image": "vinegar.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_soup",
+      "name": "Soup",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "canned",
+        "meal"
+      ],
+      "image": "soup.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_cereal",
+      "name": "Cereal",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "breakfast",
+        "grain"
+      ],
+      "image": "cereal.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_chips",
+      "name": "Chips",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "snack"
+      ],
+      "image": "chips.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_crackers",
+      "name": "Crackers",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "snack"
+      ],
+      "image": "crackers.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_nuts",
+      "name": "Nuts",
+      "category": "Pantry & Condiments 🧂",
+      "keywords": [
+        "snack",
+        "healthy"
+      ],
+      "image": "nuts.jpg",
+      "metric": "kg"
+    }
+  ]
+}

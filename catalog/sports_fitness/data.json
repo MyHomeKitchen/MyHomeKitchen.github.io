@@ -1,0 +1,60 @@
+{
+  "name": "Sports & Fitness 🏃",
+  "items": [
+    {
+      "id": "c_yoga_mat",
+      "name": "Yoga Mat",
+      "category": "Sports & Fitness 🏃",
+      "keywords": [
+        "exercise",
+        "gym"
+      ],
+      "image": "yoga_mat.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_dumbbells",
+      "name": "Dumbbells",
+      "category": "Sports & Fitness 🏃",
+      "keywords": [
+        "weights",
+        "gym"
+      ],
+      "image": "dumbbells.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_water_bottle",
+      "name": "Water Bottle",
+      "category": "Sports & Fitness 🏃",
+      "keywords": [
+        "drink",
+        "gym"
+      ],
+      "image": "reusable_bottle.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_soccer_ball",
+      "name": "Soccer Ball",
+      "category": "Sports & Fitness 🏃",
+      "keywords": [
+        "game",
+        "ball"
+      ],
+      "image": "soccer_ball.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_tennis_balls",
+      "name": "Tennis Balls",
+      "category": "Sports & Fitness 🏃",
+      "keywords": [
+        "game",
+        "ball"
+      ],
+      "image": "tennis_balls.jpg",
+      "metric": "unit"
+    }
+  ]
+}

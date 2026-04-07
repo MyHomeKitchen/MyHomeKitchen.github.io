@@ -1,0 +1,123 @@
+{
+  "name": "Fruits 🍎",
+  "items": [
+    {
+      "id": "c_apple",
+      "name": "Apple",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "red",
+        "snack"
+      ],
+      "image": "apple.png",
+      "metric": "kg"
+    },
+    {
+      "id": "c_banana",
+      "name": "Banana",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "yellow",
+        "snack"
+      ],
+      "image": "banana.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_lemon",
+      "name": "Lemon",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "citrus",
+        "sour"
+      ],
+      "image": "lemon.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_lime",
+      "name": "Lime",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "citrus",
+        "sour"
+      ],
+      "image": "lime.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_orange",
+      "name": "Orange",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "citrus",
+        "snack"
+      ],
+      "image": "orange.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_avocado",
+      "name": "Avocado",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "veg",
+        "fruit",
+        "green"
+      ],
+      "image": "avocado.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_grapes",
+      "name": "Grapes",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "snack"
+      ],
+      "image": "grapes.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_strawberry",
+      "name": "Strawberry",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "red",
+        "berry"
+      ],
+      "image": "strawberry.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_blueberry",
+      "name": "Blueberry",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "blue",
+        "berry"
+      ],
+      "image": "blueberry.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_watermelon",
+      "name": "Watermelon",
+      "category": "Fruits 🍎",
+      "keywords": [
+        "fruit",
+        "melon"
+      ],
+      "image": "watermelon.jpg",
+      "metric": "L"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Arts & Crafts 🎨",
+  "items": [
+    {
+      "id": "c_glue",
+      "name": "Glue Stick",
+      "category": "Arts & Crafts 🎨",
+      "keywords": [
+        "school",
+        "art"
+      ],
+      "image": "glue_stick.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_markers",
+      "name": "Markers",
+      "category": "Arts & Crafts 🎨",
+      "keywords": [
+        "art",
+        "draw"
+      ],
+      "image": "markers.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_yarn",
+      "name": "Yarn",
+      "category": "Arts & Crafts 🎨",
+      "keywords": [
+        "knit",
+        "art"
+      ],
+      "image": "yarn.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_paint",
+      "name": "Acrylic Paint",
+      "category": "Arts & Crafts 🎨",
+      "keywords": [
+        "art",
+        "color"
+      ],
+      "image": "paint.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_brushes",
+      "name": "Paint Brushes",
+      "category": "Arts & Crafts 🎨",
+      "keywords": [
+        "art",
+        "tool"
+      ],
+      "image": "brushes.jpg",
+      "metric": "unit"
+    }
+  ]
+}

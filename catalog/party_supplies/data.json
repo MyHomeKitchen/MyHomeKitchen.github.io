@@ -1,0 +1,60 @@
+{
+  "name": "Party Supplies 🎉",
+  "items": [
+    {
+      "id": "c_balloons",
+      "name": "Balloons",
+      "category": "Party Supplies 🎉",
+      "keywords": [
+        "birthday",
+        "fun"
+      ],
+      "image": "balloons.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_candles",
+      "name": "Birthday Candles",
+      "category": "Party Supplies 🎉",
+      "keywords": [
+        "birthday",
+        "cake"
+      ],
+      "image": "candles.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_plates",
+      "name": "Paper Plates",
+      "category": "Party Supplies 🎉",
+      "keywords": [
+        "picnic",
+        "food"
+      ],
+      "image": "paper_plates.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cups",
+      "name": "Red Cups",
+      "category": "Party Supplies 🎉",
+      "keywords": [
+        "drink",
+        "party"
+      ],
+      "image": "red_cups.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_napkins",
+      "name": "Napkins",
+      "category": "Party Supplies 🎉",
+      "keywords": [
+        "paper",
+        "cleaning"
+      ],
+      "image": "napkins.jpg",
+      "metric": "unit"
+    }
+  ]
+}

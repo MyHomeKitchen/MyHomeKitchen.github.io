@@ -1,0 +1,27 @@
+{
+  "name": "Books 📚",
+  "items": [
+    {
+      "id": "c_novel",
+      "name": "Novel",
+      "category": "Books 📚",
+      "keywords": [
+        "read",
+        "story"
+      ],
+      "image": "novel.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cookbook",
+      "name": "Cookbook",
+      "category": "Books 📚",
+      "keywords": [
+        "read",
+        "food"
+      ],
+      "image": "cookbook.jpg",
+      "metric": "unit"
+    }
+  ]
+}

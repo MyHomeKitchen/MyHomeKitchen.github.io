@@ -1,0 +1,63 @@
+{
+  "name": "Frozen Foods ❄️",
+  "items": [
+    {
+      "id": "c_ice_cream",
+      "name": "Ice Cream",
+      "category": "Frozen Foods ❄️",
+      "keywords": [
+        "dessert",
+        "frozen",
+        "sweet"
+      ],
+      "image": "ice_cream.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_frozen_pizza",
+      "name": "Frozen Pizza",
+      "category": "Frozen Foods ❄️",
+      "keywords": [
+        "dinner",
+        "frozen"
+      ],
+      "image": "frozen_pizza.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_frozen_veggies",
+      "name": "Frozen Veggies",
+      "category": "Frozen Foods ❄️",
+      "keywords": [
+        "veg",
+        "frozen"
+      ],
+      "image": "frozen_veggies.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_fries",
+      "name": "French Fries",
+      "category": "Frozen Foods ❄️",
+      "keywords": [
+        "side",
+        "frozen",
+        "potato"
+      ],
+      "image": "fries.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_nuggets",
+      "name": "Chicken Nuggets",
+      "category": "Frozen Foods ❄️",
+      "keywords": [
+        "meat",
+        "frozen",
+        "quick"
+      ],
+      "image": "nuggets.jpg",
+      "metric": "pack"
+    }
+  ]
+}

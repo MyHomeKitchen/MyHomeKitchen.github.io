@@ -1,0 +1,69 @@
+{
+  "name": "Electronics & Tech 🔌",
+  "items": [
+    {
+      "id": "c_charger",
+      "name": "Phone Charger",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "phone",
+        "power"
+      ],
+      "image": "charger.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_usb_cable",
+      "name": "USB Cable",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "phone",
+        "computer"
+      ],
+      "image": "usb_cable.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_hdmi",
+      "name": "HDMI Cable",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "tv",
+        "computer"
+      ],
+      "image": "hdmi.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_aa_batteries",
+      "name": "AA Batteries",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "power"
+      ],
+      "image": "aa_batteries.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_aaa_batteries",
+      "name": "AAA Batteries",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "power"
+      ],
+      "image": "aaa_batteries.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_extension_cord",
+      "name": "Extension Cord",
+      "category": "Electronics & Tech 🔌",
+      "keywords": [
+        "power",
+        "home"
+      ],
+      "image": "extension_cord.jpg",
+      "metric": "unit"
+    }
+  ]
+}

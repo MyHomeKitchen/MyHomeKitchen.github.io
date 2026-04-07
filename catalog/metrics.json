@@ -1,0 +1,36 @@
+{
+  "weight": {
+    "id": "weight",
+    "label": "Weight",
+    "options": [
+      { "id": "kg", "name": "Kilograms", "short": "kg", "step": 0.1 },
+      { "id": "g", "name": "Grams", "short": "g", "step": 100 },
+      { "id": "lb", "name": "Pounds", "short": "lbs", "step": 0.25 }
+    ]
+  },
+  "volume": {
+    "id": "volume",
+    "label": "Volume",
+    "options": [
+      { "id": "L", "name": "Liters", "short": "L", "step": 1 },
+      { "id": "ml", "name": "Milliliters", "short": "ml", "step": 100 },
+      { "id": "gal", "name": "Gallons", "short": "gal", "step": 1 }
+    ]
+  },
+  "count": {
+    "id": "count",
+    "label": "Count",
+    "options": [
+      { "id": "unit", "name": "Units", "short": "unit", "step": 1 },
+      { "id": "dozen", "name": "Dozen", "short": "doz", "step": 1 }
+    ]
+  },
+  "packaging": {
+    "id": "packaging",
+    "label": "Packaging",
+    "options": [
+      { "id": "pack", "name": "Packs", "short": "pack", "step": 1 },
+      { "id": "box", "name": "Boxes", "short": "box", "step": 1 }
+    ]
+  }
+}

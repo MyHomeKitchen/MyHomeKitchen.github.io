@@ -1,0 +1,143 @@
+{
+  "name": "Cleaning & Household 🧹",
+  "items": [
+    {
+      "id": "c_dish_soap",
+      "name": "Dish Soap",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean",
+        "kitchen"
+      ],
+      "image": "dish_soap.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_sponges",
+      "name": "Sponges",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean"
+      ],
+      "image": "assets/default.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_trash_bags",
+      "name": "Trash Bags",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "waste"
+      ],
+      "image": "trash_bags.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_paper_towels",
+      "name": "Paper Towels",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean",
+        "kitchen"
+      ],
+      "image": "paper_towels.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_tp",
+      "name": "Toilet Paper",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "bathroom"
+      ],
+      "image": "tp.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_laundry_det",
+      "name": "Laundry Detergent",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean",
+        "clothes"
+      ],
+      "image": "laundry_det.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_dishwasher_pods",
+      "name": "Dishwasher Pods",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean",
+        "kitchen"
+      ],
+      "image": "dishwasher_pods.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_all_purpose",
+      "name": "All-Purpose Cleaner",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean"
+      ],
+      "image": "assets/default.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_glass_cleaner",
+      "name": "Glass Cleaner",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "clean"
+      ],
+      "image": "assets/default.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_aluminum_foil",
+      "name": "Aluminum Foil",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "kitchen",
+        "wrap"
+      ],
+      "image": "assets/default.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_plastic_wrap",
+      "name": "Plastic Wrap",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "kitchen",
+        "wrap"
+      ],
+      "image": "assets/default.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_batteries",
+      "name": "Batteries",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "tools",
+        "power"
+      ],
+      "image": "batteries.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_light_bulbs",
+      "name": "Light Bulbs",
+      "category": "Cleaning & Household 🧹",
+      "keywords": [
+        "tools",
+        "light"
+      ],
+      "image": "light_bulbs.jpg",
+      "metric": "pack"
+    }
+  ]
+}

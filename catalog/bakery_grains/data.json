@@ -1,0 +1,106 @@
+{
+  "name": "Bakery & Grains 🍞",
+  "items": [
+    {
+      "id": "c_bread",
+      "name": "Bread",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "bakery",
+        "carb"
+      ],
+      "image": "bread.png",
+      "metric": "pack"
+    },
+    {
+      "id": "c_rice",
+      "name": "Rice",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "grain",
+        "pantry"
+      ],
+      "image": "rice.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_pasta",
+      "name": "Pasta",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "grain",
+        "pantry",
+        "dinner"
+      ],
+      "image": "pasta.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_flour",
+      "name": "Flour",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "baking",
+        "pantry"
+      ],
+      "image": "flour.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_sugar",
+      "name": "Sugar",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "baking",
+        "pantry",
+        "sweet"
+      ],
+      "image": "sugar.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_oats",
+      "name": "Oats",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "grain",
+        "breakfast"
+      ],
+      "image": "oats.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_bagels",
+      "name": "Bagels",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "bakery",
+        "breakfast"
+      ],
+      "image": "bagels.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_tortillas",
+      "name": "Tortillas",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "bakery",
+        "mexican"
+      ],
+      "image": "tortillas.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_quinoa",
+      "name": "Quinoa",
+      "category": "Bakery & Grains 🍞",
+      "keywords": [
+        "grain",
+        "healthy"
+      ],
+      "image": "quinoa.jpg",
+      "metric": "kg"
+    }
+  ]
+}

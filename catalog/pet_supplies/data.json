@@ -1,0 +1,49 @@
+{
+  "name": "Pet Supplies 🐾",
+  "items": [
+    {
+      "id": "c_dog_food",
+      "name": "Dog Food",
+      "category": "Pet Supplies 🐾",
+      "keywords": [
+        "pet",
+        "dog"
+      ],
+      "image": "dog_food.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cat_food",
+      "name": "Cat Food",
+      "category": "Pet Supplies 🐾",
+      "keywords": [
+        "pet",
+        "cat"
+      ],
+      "image": "cat_food.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cat_litter",
+      "name": "Cat Litter",
+      "category": "Pet Supplies 🐾",
+      "keywords": [
+        "pet",
+        "cat"
+      ],
+      "image": "cat_litter.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_dog_treats",
+      "name": "Dog Treats",
+      "category": "Pet Supplies 🐾",
+      "keywords": [
+        "pet",
+        "dog"
+      ],
+      "image": "dog_treats.jpg",
+      "metric": "unit"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Baby & Kids 👶",
+  "items": [
+    {
+      "id": "c_diapers",
+      "name": "Diapers",
+      "category": "Baby & Kids 👶",
+      "keywords": [
+        "baby"
+      ],
+      "image": "diapers.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_wipes",
+      "name": "Wet Wipes",
+      "category": "Baby & Kids 👶",
+      "keywords": [
+        "baby",
+        "clean"
+      ],
+      "image": "wipes.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_baby_food",
+      "name": "Baby Food",
+      "category": "Baby & Kids 👶",
+      "keywords": [
+        "baby",
+        "food"
+      ],
+      "image": "baby_food.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_formula",
+      "name": "Formula",
+      "category": "Baby & Kids 👶",
+      "keywords": [
+        "baby",
+        "food"
+      ],
+      "image": "formula.jpg",
+      "metric": "unit"
+    }
+  ]
+}

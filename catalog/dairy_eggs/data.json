@@ -1,0 +1,119 @@
+{
+  "name": "Dairy & Eggs 🥛",
+  "items": [
+    {
+      "id": "c_milk",
+      "name": "Milk",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "drink"
+      ],
+      "image": "milk.png",
+      "metric": "L"
+    },
+    {
+      "id": "c_eggs",
+      "name": "Eggs",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "breakfast",
+        "protein"
+      ],
+      "image": "eggs.jpg",
+      "metric": "dozen"
+    },
+    {
+      "id": "c_cheese",
+      "name": "Cheese",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "snack"
+      ],
+      "image": "cheese.png",
+      "metric": "unit"
+    },
+    {
+      "id": "c_butter",
+      "name": "Butter",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "cooking"
+      ],
+      "image": "butter.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_yogurt",
+      "name": "Yogurt",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "snack",
+        "probiotic"
+      ],
+      "image": "yogurt.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cream_cheese",
+      "name": "Cream Cheese",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "breakfast"
+      ],
+      "image": "cream_cheese.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_sour_cream",
+      "name": "Sour Cream",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "topping"
+      ],
+      "image": "sour_cream.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_heavy_cream",
+      "name": "Heavy Cream",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "dairy",
+        "cooking"
+      ],
+      "image": "heavy_cream.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_orange_juice",
+      "name": "Orange Juice",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "drink",
+        "juice",
+        "breakfast"
+      ],
+      "image": "orange_juice.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_tofu",
+      "name": "Tofu",
+      "category": "Dairy & Eggs 🥛",
+      "keywords": [
+        "soy",
+        "protein",
+        "vegan"
+      ],
+      "image": "tofu.jpg",
+      "metric": "unit"
+    }
+  ]
+}

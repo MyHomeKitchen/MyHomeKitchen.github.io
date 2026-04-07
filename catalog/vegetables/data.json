@@ -1,0 +1,167 @@
+{
+  "name": "Vegetables 🥬",
+  "items": [
+    {
+      "id": "c_carrot",
+      "name": "Carrot",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "orange",
+        "root"
+      ],
+      "image": "carrot.png",
+      "metric": "kg"
+    },
+    {
+      "id": "c_tomato",
+      "name": "Tomato",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "red",
+        "salad"
+      ],
+      "image": "tomato.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_b_potato",
+      "name": "Potato",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "root",
+        "fry"
+      ],
+      "image": "potato.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_onion",
+      "name": "Onion",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "cooking"
+      ],
+      "image": "onion.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_garlic",
+      "name": "Garlic",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "seasoning"
+      ],
+      "image": "garlic.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_lettuce",
+      "name": "Lettuce",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "salad",
+        "green"
+      ],
+      "image": "lettuce.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_spinach",
+      "name": "Spinach",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "green",
+        "salad"
+      ],
+      "image": "spinach.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_cucumber",
+      "name": "Cucumber",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "salad"
+      ],
+      "image": "cucumber.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_broccoli",
+      "name": "Broccoli",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "green"
+      ],
+      "image": "broccoli.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_bell_pepper",
+      "name": "Bell Pepper",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "image": "bell_pepper.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_zucchini",
+      "name": "Zucchini",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "green"
+      ],
+      "image": "zucchini.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_mushroom",
+      "name": "Mushroom",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "fungus"
+      ],
+      "image": "mushroom.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_corn",
+      "name": "Corn",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "grain"
+      ],
+      "image": "corn.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_ginger",
+      "name": "Ginger",
+      "category": "Vegetables 🥬",
+      "keywords": [
+        "veg",
+        "root",
+        "seasoning"
+      ],
+      "image": "ginger.jpg",
+      "metric": "kg"
+    }
+  ]
+}

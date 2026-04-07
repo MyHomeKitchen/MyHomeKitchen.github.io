@@ -1,0 +1,48 @@
+{
+  "name": "Health & Medicine 💊",
+  "items": [
+    {
+      "id": "c_pain_reliever",
+      "name": "Pain Reliever",
+      "category": "Health & Medicine 💊",
+      "keywords": [
+        "med",
+        "health"
+      ],
+      "image": "pain_reliever.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_bandages",
+      "name": "Bandages",
+      "category": "Health & Medicine 💊",
+      "keywords": [
+        "health",
+        "first aid"
+      ],
+      "image": "bandages.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_vitamins",
+      "name": "Vitamins",
+      "category": "Health & Medicine 💊",
+      "keywords": [
+        "health"
+      ],
+      "image": "vitamins.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cough_syrup",
+      "name": "Cough Syrup",
+      "category": "Health & Medicine 💊",
+      "keywords": [
+        "med",
+        "cold"
+      ],
+      "image": "cough_syrup.jpg",
+      "metric": "unit"
+    }
+  ]
+}

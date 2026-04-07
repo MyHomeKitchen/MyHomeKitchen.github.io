@@ -1,0 +1,60 @@
+{
+  "name": "Camping & Outdoors ⛺",
+  "items": [
+    {
+      "id": "c_tent",
+      "name": "Tent",
+      "category": "Camping & Outdoors ⛺",
+      "keywords": [
+        "outdoors",
+        "sleep"
+      ],
+      "image": "tent.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_sleeping_bag",
+      "name": "Sleeping Bag",
+      "category": "Camping & Outdoors ⛺",
+      "keywords": [
+        "outdoors",
+        "sleep"
+      ],
+      "image": "sleeping_bag.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_lantern",
+      "name": "Lantern",
+      "category": "Camping & Outdoors ⛺",
+      "keywords": [
+        "light",
+        "outdoors"
+      ],
+      "image": "lantern.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_bug_spray",
+      "name": "Bug Spray",
+      "category": "Camping & Outdoors ⛺",
+      "keywords": [
+        "outdoors",
+        "protect"
+      ],
+      "image": "bug_spray.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cooler",
+      "name": "Cooler",
+      "category": "Camping & Outdoors ⛺",
+      "keywords": [
+        "food",
+        "cold"
+      ],
+      "image": "cooler.jpg",
+      "metric": "unit"
+    }
+  ]
+}

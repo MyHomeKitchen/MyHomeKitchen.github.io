@@ -1,0 +1,60 @@
+{
+  "name": "Gardening 🌻",
+  "items": [
+    {
+      "id": "c_pro_soil",
+      "name": "Potting Soil",
+      "category": "Gardening 🌻",
+      "keywords": [
+        "plants",
+        "dirt"
+      ],
+      "image": "soil.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_seeds",
+      "name": "Seeds",
+      "category": "Gardening 🌻",
+      "keywords": [
+        "plants",
+        "flowers"
+      ],
+      "image": "seeds.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_fertilizer",
+      "name": "Fertilizer",
+      "category": "Gardening 🌻",
+      "keywords": [
+        "plants",
+        "food"
+      ],
+      "image": "fertilizer.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_hose",
+      "name": "Garden Hose",
+      "category": "Gardening 🌻",
+      "keywords": [
+        "water",
+        "tools"
+      ],
+      "image": "garden_hose.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_shovel",
+      "name": "Shovel",
+      "category": "Gardening 🌻",
+      "keywords": [
+        "tools",
+        "dirt"
+      ],
+      "image": "shovel.jpg",
+      "metric": "unit"
+    }
+  ]
+}

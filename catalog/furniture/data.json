@@ -1,0 +1,49 @@
+{
+  "name": "Furniture 🪑",
+  "items": [
+    {
+      "id": "c_chair",
+      "name": "Chair",
+      "category": "Furniture 🪑",
+      "keywords": [
+        "sit",
+        "home"
+      ],
+      "image": "chair.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_desk",
+      "name": "Desk",
+      "category": "Furniture 🪑",
+      "keywords": [
+        "work",
+        "home"
+      ],
+      "image": "desk.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_bookshelf",
+      "name": "Bookshelf",
+      "category": "Furniture 🪑",
+      "keywords": [
+        "storage",
+        "home"
+      ],
+      "image": "bookshelf.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_lamp",
+      "name": "Table Lamp",
+      "category": "Furniture 🪑",
+      "keywords": [
+        "light",
+        "home"
+      ],
+      "image": "lamp.jpg",
+      "metric": "unit"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Games & Puzzles 🎲",
+  "items": [
+    {
+      "id": "c_board_game",
+      "name": "Board Game",
+      "category": "Games & Puzzles 🎲",
+      "keywords": [
+        "fun",
+        "family"
+      ],
+      "image": "board_game.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_puzzle",
+      "name": "Puzzle",
+      "category": "Games & Puzzles 🎲",
+      "keywords": [
+        "fun",
+        "brain"
+      ],
+      "image": "puzzle.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_cards",
+      "name": "Deck of Cards",
+      "category": "Games & Puzzles 🎲",
+      "keywords": [
+        "fun",
+        "poker"
+      ],
+      "image": "cards.jpg",
+      "metric": "unit"
+    }
+  ]
+}

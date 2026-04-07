@@ -1,0 +1,49 @@
+{
+  "name": "Music & Instruments 🎵",
+  "items": [
+    {
+      "id": "c_guitar",
+      "name": "Guitar",
+      "category": "Music & Instruments 🎵",
+      "keywords": [
+        "instrument",
+        "play"
+      ],
+      "image": "guitar.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_piano",
+      "name": "Keyboard Piano",
+      "category": "Music & Instruments 🎵",
+      "keywords": [
+        "instrument",
+        "play"
+      ],
+      "image": "piano.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_drums",
+      "name": "Drum Sticks",
+      "category": "Music & Instruments 🎵",
+      "keywords": [
+        "instrument",
+        "play"
+      ],
+      "image": "drum_sticks.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_headphones",
+      "name": "Headphones",
+      "category": "Music & Instruments 🎵",
+      "keywords": [
+        "listen",
+        "tech"
+      ],
+      "image": "headphones.jpg",
+      "metric": "unit"
+    }
+  ]
+}

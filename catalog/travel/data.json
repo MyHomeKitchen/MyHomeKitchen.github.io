@@ -1,0 +1,49 @@
+{
+  "name": "Travel ✈️",
+  "items": [
+    {
+      "id": "c_suitcase",
+      "name": "Suitcase",
+      "category": "Travel ✈️",
+      "keywords": [
+        "trip",
+        "bag"
+      ],
+      "image": "suitcase.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_backpack",
+      "name": "Backpack",
+      "category": "Travel ✈️",
+      "keywords": [
+        "trip",
+        "school"
+      ],
+      "image": "backpack.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_travel_pillow",
+      "name": "Neck Pillow",
+      "category": "Travel ✈️",
+      "keywords": [
+        "trip",
+        "comfort"
+      ],
+      "image": "travel_pillow.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_eye_mask",
+      "name": "Eye Mask",
+      "category": "Travel ✈️",
+      "keywords": [
+        "sleep",
+        "plane"
+      ],
+      "image": "eye_mask.jpg",
+      "metric": "unit"
+    }
+  ]
+}

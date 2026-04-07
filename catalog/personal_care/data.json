@@ -1,0 +1,109 @@
+{
+  "name": "Personal Care 🧴",
+  "items": [
+    {
+      "id": "c_shampoo",
+      "name": "Shampoo",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "hair",
+        "clean"
+      ],
+      "image": "shampoo.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_conditioner",
+      "name": "Conditioner",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "hair"
+      ],
+      "image": "conditioner.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_body_wash",
+      "name": "Body Wash",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "body",
+        "clean"
+      ],
+      "image": "body_wash.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_soap_bar",
+      "name": "Soap",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "body",
+        "clean"
+      ],
+      "image": "soap.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_toothpaste",
+      "name": "Toothpaste",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "teeth"
+      ],
+      "image": "toothpaste.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_toothbrush",
+      "name": "Toothbrush",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "teeth"
+      ],
+      "image": "toothbrush.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_deodorant",
+      "name": "Deodorant",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "body"
+      ],
+      "image": "deodorant.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_razor",
+      "name": "Razor",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "shave"
+      ],
+      "image": "razor.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_lotion",
+      "name": "Lotion",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "skin"
+      ],
+      "image": "lotion.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_sunscreen",
+      "name": "Sunscreen",
+      "category": "Personal Care 🧴",
+      "keywords": [
+        "skin",
+        "sun"
+      ],
+      "image": "sunscreen.jpg",
+      "metric": "pack"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Snacks & Candy 🍿",
+  "items": [
+    {
+      "id": "c_popcorn",
+      "name": "Popcorn",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "movie",
+        "salt"
+      ],
+      "image": "popcorn.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_pretzels",
+      "name": "Pretzels",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "salt"
+      ],
+      "image": "pretzels.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_gum",
+      "name": "Chewing Gum",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "candy",
+        "mint"
+      ],
+      "image": "gum.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_chocolate",
+      "name": "Chocolate Bar",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "candy",
+        "sweet"
+      ],
+      "image": "chocolate.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_gummies",
+      "name": "Gummy Bears",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "candy",
+        "sweet"
+      ],
+      "image": "gummies.jpg",
+      "metric": "pack"
+    },
+    {
+      "id": "c_granola_bar",
+      "name": "Granola Bars",
+      "category": "Snacks & Candy 🍿",
+      "keywords": [
+        "breakfast",
+        "healthy"
+      ],
+      "image": "granola_bar.jpg",
+      "metric": "pack"
+    }
+  ]
+}

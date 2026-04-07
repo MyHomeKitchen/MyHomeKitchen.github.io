@@ -1,0 +1,69 @@
+{
+  "name": "Beverages ☕",
+  "items": [
+    {
+      "id": "c_coffee",
+      "name": "Coffee",
+      "category": "Beverages ☕",
+      "keywords": [
+        "drink",
+        "caffeine"
+      ],
+      "image": "coffee.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_tea",
+      "name": "Tea",
+      "category": "Beverages ☕",
+      "keywords": [
+        "drink"
+      ],
+      "image": "tea.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_soda",
+      "name": "Soda",
+      "category": "Beverages ☕",
+      "keywords": [
+        "drink",
+        "fizzy"
+      ],
+      "image": "soda.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_water",
+      "name": "Water",
+      "category": "Beverages ☕",
+      "keywords": [
+        "drink"
+      ],
+      "image": "water.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_beer",
+      "name": "Beer",
+      "category": "Beverages ☕",
+      "keywords": [
+        "alcohol",
+        "drink"
+      ],
+      "image": "beer.jpg",
+      "metric": "L"
+    },
+    {
+      "id": "c_wine",
+      "name": "Wine",
+      "category": "Beverages ☕",
+      "keywords": [
+        "alcohol",
+        "drink"
+      ],
+      "image": "wine.jpg",
+      "metric": "L"
+    }
+  ]
+}

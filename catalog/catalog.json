@@ -1,0 +1,167 @@
+[
+  {
+    "id": "fruits",
+    "name": "Fruits \ud83c\udf4e",
+    "file": "fruits/data.json"
+  },
+  {
+    "id": "vegetables",
+    "name": "Vegetables \ud83e\udd6c",
+    "file": "vegetables/data.json"
+  },
+  {
+    "id": "dairy_eggs",
+    "name": "Dairy & Eggs \ud83e\udd5b",
+    "file": "dairy_eggs/data.json"
+  },
+  {
+    "id": "bakery_grains",
+    "name": "Bakery & Grains \ud83c\udf5e",
+    "file": "bakery_grains/data.json"
+  },
+  {
+    "id": "meat_seafood",
+    "name": "Meat & Seafood \ud83e\udd69",
+    "file": "meat_seafood/data.json"
+  },
+  {
+    "id": "pantry_condiments",
+    "name": "Pantry & Condiments \ud83e\uddc2",
+    "file": "pantry_condiments/data.json"
+  },
+  {
+    "id": "beverages",
+    "name": "Beverages \u2615",
+    "file": "beverages/data.json"
+  },
+  {
+    "id": "cleaning_household",
+    "name": "Cleaning & Household \ud83e\uddf9",
+    "file": "cleaning_household/data.json"
+  },
+  {
+    "id": "personal_care",
+    "name": "Personal Care \ud83e\uddf4",
+    "file": "personal_care/data.json"
+  },
+  {
+    "id": "frozen_foods",
+    "name": "Frozen Foods \u2744\ufe0f",
+    "file": "frozen_foods/data.json"
+  },
+  {
+    "id": "baby_kids",
+    "name": "Baby & Kids \ud83d\udc76",
+    "file": "baby_kids/data.json"
+  },
+  {
+    "id": "pet_supplies",
+    "name": "Pet Supplies \ud83d\udc3e",
+    "file": "pet_supplies/data.json"
+  },
+  {
+    "id": "health_medicine",
+    "name": "Health & Medicine \ud83d\udc8a",
+    "file": "health_medicine/data.json"
+  },
+  {
+    "id": "international_foods",
+    "name": "International Foods \ud83c\udf0f",
+    "file": "international_foods/data.json"
+  },
+  {
+    "id": "pantry",
+    "name": "Pantry \ud83e\uddc2",
+    "file": "pantry/data.json"
+  },
+  {
+    "id": "office_school",
+    "name": "Office & School \ud83d\udd87\ufe0f",
+    "file": "office_school/data.json"
+  },
+  {
+    "id": "party_supplies",
+    "name": "Party Supplies \ud83c\udf89",
+    "file": "party_supplies/data.json"
+  },
+  {
+    "id": "gardening",
+    "name": "Gardening \ud83c\udf3b",
+    "file": "gardening/data.json"
+  },
+  {
+    "id": "snacks_candy",
+    "name": "Snacks & Candy \ud83c\udf7f",
+    "file": "snacks_candy/data.json"
+  },
+  {
+    "id": "electronics_tech",
+    "name": "Electronics & Tech \ud83d\udd0c",
+    "file": "electronics_tech/data.json"
+  },
+  {
+    "id": "tools_hardware",
+    "name": "Tools & Hardware \ud83d\udee0\ufe0f",
+    "file": "tools_hardware/data.json"
+  },
+  {
+    "id": "sports_fitness",
+    "name": "Sports & Fitness \ud83c\udfc3",
+    "file": "sports_fitness/data.json"
+  },
+  {
+    "id": "arts_crafts",
+    "name": "Arts & Crafts \ud83c\udfa8",
+    "file": "arts_crafts/data.json"
+  },
+  {
+    "id": "home_decor",
+    "name": "Home Decor \ud83d\udecb\ufe0f",
+    "file": "home_decor/data.json"
+  },
+  {
+    "id": "clothing_accessories",
+    "name": "Clothing & Accessories \ud83d\udc55",
+    "file": "clothing_accessories/data.json"
+  },
+  {
+    "id": "automotive",
+    "name": "Automotive \ud83d\ude97",
+    "file": "automotive/data.json"
+  },
+  {
+    "id": "camping_outdoors",
+    "name": "Camping & Outdoors \u26fa",
+    "file": "camping_outdoors/data.json"
+  },
+  {
+    "id": "books",
+    "name": "Books \ud83d\udcda",
+    "file": "books/data.json"
+  },
+  {
+    "id": "games_puzzles",
+    "name": "Games & Puzzles \ud83c\udfb2",
+    "file": "games_puzzles/data.json"
+  },
+  {
+    "id": "travel",
+    "name": "Travel \u2708\ufe0f",
+    "file": "travel/data.json"
+  },
+  {
+    "id": "jewelry",
+    "name": "Jewelry \ud83d\udc8e",
+    "file": "jewelry/data.json"
+  },
+  {
+    "id": "furniture",
+    "name": "Furniture \ud83e\ude91",
+    "file": "furniture/data.json"
+  },
+  {
+    "id": "music_instruments",
+    "name": "Music & Instruments \ud83c\udfb5",
+    "file": "music_instruments/data.json"
+  }
+]

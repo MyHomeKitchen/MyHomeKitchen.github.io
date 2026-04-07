@@ -1,0 +1,70 @@
+{
+  "name": "Office & School 🖇️",
+  "items": [
+    {
+      "id": "c_pens",
+      "name": "Pens",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "school",
+        "work"
+      ],
+      "image": "pens.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_notebook",
+      "name": "Notebook",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "school",
+        "paper"
+      ],
+      "image": "notebook.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_paper",
+      "name": "Printer Paper",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "printer",
+        "work"
+      ],
+      "image": "printer_paper.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_tape",
+      "name": "Tape",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "school",
+        "tools"
+      ],
+      "image": "tape.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_scissors",
+      "name": "Scissors",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "school",
+        "tools"
+      ],
+      "image": "scissors.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_envelopes",
+      "name": "Envelopes",
+      "category": "Office & School 🖇️",
+      "keywords": [
+        "mail"
+      ],
+      "image": "envelopes.jpg",
+      "metric": "unit"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Jewelry 💎",
+  "items": [
+    {
+      "id": "c_necklace",
+      "name": "Necklace",
+      "category": "Jewelry 💎",
+      "keywords": [
+        "wear",
+        "gold"
+      ],
+      "image": "necklace.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_ring",
+      "name": "Ring",
+      "category": "Jewelry 💎",
+      "keywords": [
+        "wear",
+        "gold"
+      ],
+      "image": "ring.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_earrings",
+      "name": "Earrings",
+      "category": "Jewelry 💎",
+      "keywords": [
+        "wear",
+        "gold"
+      ],
+      "image": "earrings.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_watch",
+      "name": "Wrist Watch",
+      "category": "Jewelry 💎",
+      "keywords": [
+        "wear",
+        "time"
+      ],
+      "image": "watch.jpg",
+      "metric": "unit"
+    }
+  ]
+}

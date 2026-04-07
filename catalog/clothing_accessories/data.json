@@ -1,0 +1,60 @@
+{
+  "name": "Clothing & Accessories 👕",
+  "items": [
+    {
+      "id": "c_tshirt",
+      "name": "T-Shirt",
+      "category": "Clothing & Accessories 👕",
+      "keywords": [
+        "wear",
+        "clothes"
+      ],
+      "image": "tshirt.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_socks",
+      "name": "Socks",
+      "category": "Clothing & Accessories 👕",
+      "keywords": [
+        "wear",
+        "feet"
+      ],
+      "image": "socks.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_underwear",
+      "name": "Underwear",
+      "category": "Clothing & Accessories 👕",
+      "keywords": [
+        "wear",
+        "clothes"
+      ],
+      "image": "underwear.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_hat",
+      "name": "Hat",
+      "category": "Clothing & Accessories 👕",
+      "keywords": [
+        "wear",
+        "head"
+      ],
+      "image": "hat.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_scarf",
+      "name": "Scarf",
+      "category": "Clothing & Accessories 👕",
+      "keywords": [
+        "wear",
+        "winter"
+      ],
+      "image": "scarf.jpg",
+      "metric": "unit"
+    }
+  ]
+}

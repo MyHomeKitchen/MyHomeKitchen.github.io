@@ -1,0 +1,60 @@
+{
+  "name": "Home Decor 🛋️",
+  "items": [
+    {
+      "id": "c_pillow",
+      "name": "Throw Pillow",
+      "category": "Home Decor 🛋️",
+      "keywords": [
+        "couch",
+        "comfort"
+      ],
+      "image": "pillow.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_blanket",
+      "name": "Blanket",
+      "category": "Home Decor 🛋️",
+      "keywords": [
+        "warm",
+        "bed"
+      ],
+      "image": "blanket.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_candle_decor",
+      "name": "Scented Candle",
+      "category": "Home Decor 🛋️",
+      "keywords": [
+        "smell",
+        "relax"
+      ],
+      "image": "scented_candle.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_vase",
+      "name": "Flower Vase",
+      "category": "Home Decor 🛋️",
+      "keywords": [
+        "plant",
+        "decor"
+      ],
+      "image": "vase.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_picture_frame",
+      "name": "Picture Frame",
+      "category": "Home Decor 🛋️",
+      "keywords": [
+        "photo",
+        "decor"
+      ],
+      "image": "frame.jpg",
+      "metric": "unit"
+    }
+  ]
+}

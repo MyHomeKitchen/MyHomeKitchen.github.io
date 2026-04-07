@@ -1,0 +1,71 @@
+{
+  "name": "Tools & Hardware 🛠️",
+  "items": [
+    {
+      "id": "c_hammer",
+      "name": "Hammer",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "fix",
+        "build"
+      ],
+      "image": "hammer.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_screwdriver",
+      "name": "Screwdriver",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "fix",
+        "build"
+      ],
+      "image": "screwdriver.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_nails",
+      "name": "Nails",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "fix",
+        "build"
+      ],
+      "image": "nails.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_screws",
+      "name": "Screws",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "fix",
+        "build"
+      ],
+      "image": "screws.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_tape_measure",
+      "name": "Tape Measure",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "measure",
+        "build"
+      ],
+      "image": "tape_measure.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_wrench",
+      "name": "Wrench",
+      "category": "Tools & Hardware 🛠️",
+      "keywords": [
+        "fix",
+        "mechanic"
+      ],
+      "image": "wrench.jpg",
+      "metric": "unit"
+    }
+  ]
+}

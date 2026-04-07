@@ -1,0 +1,38 @@
+{
+  "name": "International Foods 🌏",
+  "items": [
+    {
+      "id": "c_ramen",
+      "name": "Ramen",
+      "category": "International Foods 🌏",
+      "keywords": [
+        "soup",
+        "asian"
+      ],
+      "image": "ramen.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_curry_paste",
+      "name": "Curry Paste",
+      "category": "International Foods 🌏",
+      "keywords": [
+        "spice",
+        "asian"
+      ],
+      "image": "curry_paste.jpg",
+      "metric": "unit"
+    },
+    {
+      "id": "c_salsa",
+      "name": "Salsa",
+      "category": "International Foods 🌏",
+      "keywords": [
+        "dip",
+        "mexican"
+      ],
+      "image": "salsa.jpg",
+      "metric": "unit"
+    }
+  ]
+}

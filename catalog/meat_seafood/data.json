@@ -1,0 +1,148 @@
+{
+  "name": "Meat & Seafood 🥩",
+  "items": [
+    {
+      "id": "c_chicken",
+      "name": "Chicken",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "poultry"
+      ],
+      "image": "chicken.png",
+      "metric": "kg"
+    },
+    {
+      "id": "c_beef",
+      "name": "Beef",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "red"
+      ],
+      "image": "assets/default.png",
+      "metric": "kg"
+    },
+    {
+      "id": "c_ground_beef",
+      "name": "Ground Beef",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "burger"
+      ],
+      "image": "ground_beef.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_pork",
+      "name": "Pork",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "pig"
+      ],
+      "image": "pork.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_bacon",
+      "name": "Bacon",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "breakfast",
+        "pork"
+      ],
+      "image": "bacon.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_sausage",
+      "name": "Sausage",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "breakfast"
+      ],
+      "image": "sausage.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_ham",
+      "name": "Ham",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "lunch"
+      ],
+      "image": "ham.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_turkey",
+      "name": "Turkey",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "meat",
+        "poultry"
+      ],
+      "image": "turkey.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_fish",
+      "name": "Fish",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "seafood",
+        "healthy"
+      ],
+      "image": "fish.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_salmon",
+      "name": "Salmon",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "seafood",
+        "fish"
+      ],
+      "image": "salmon.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_shrimp",
+      "name": "Shrimp",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "seafood"
+      ],
+      "image": "shrimp.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_canned_beans",
+      "name": "Canned Beans",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "pantry",
+        "protein"
+      ],
+      "image": "canned_beans.jpg",
+      "metric": "kg"
+    },
+    {
+      "id": "c_lentils",
+      "name": "Lentils",
+      "category": "Meat & Seafood 🥩",
+      "keywords": [
+        "pantry",
+        "protein"
+      ],
+      "image": "lentils.jpg",
+      "metric": "kg"
+    }
+  ]
+}
